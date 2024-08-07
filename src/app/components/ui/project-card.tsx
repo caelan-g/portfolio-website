@@ -11,5 +11,9 @@ export default function ProjectCard({
   client: string[];
   created: string[];
 }) {
-  return <></>;
+  return (
+    <div className="">
+      <div className="text-2xl">{title}</div>
+    </div>
+  );
 }
