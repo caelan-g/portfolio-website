@@ -10,8 +10,37 @@ import { AuroraBackground } from "@/app/components/ui/aurora-background";
 export default function Home() {
   const words = ["Hey", "Salut", "Nǐ hǎo", "G'day", "Hola", "Privet"];
   const projects = [
-    { title: "project1", client: "client1", created: "2024", href: "/" },
-    { title: "project2", client: "client2", created: "2023", href: "/" },
+    {
+      title: "project1",
+      client: "client1",
+      created: "2024",
+      href: "/projects/clipjiffy",
+      src: "/",
+    },
+    {
+      title: "project2",
+      client: "client2",
+      created: "2023",
+      href: "/projects/",
+      src: "/",
+    },
+  ];
+  const experiments = [
+    {
+      title: "3d model",
+      medium: "blender",
+      created: "2024",
+      href: "/misc/",
+      src: "/",
+    },
+    {
+      title: "auto 2",
+      client: "client2",
+      medium: "IoT Device",
+      created: "2024",
+      href: "/misc/",
+      src: "/",
+    },
   ];
 
   return (
@@ -30,7 +59,7 @@ export default function Home() {
           <div className="col-start-1 col-span-3">
             <div className="text-3xl md:text-7xl font-bold text-white">
               <FlipWords words={words} /> <br />
-              I&aposm Caelan
+              {`I'm Caelan`}
             </div>
             <div className="text-xl pt-3 text-neutral-400">
               Year 11 student based in{" "}
@@ -43,49 +72,42 @@ export default function Home() {
           </div>
         </motion.div>
       </AuroraBackground>
-      <div className="pt-12">
-        <div className="text-6xl font-bold leading-normal"></div>
-
-        <div id="work" className="text-5xl pt-36 pb-72 px-10">
-          <div className="grid grid-cols-2 gap-3">
-            {projects.map((project) => {
-              return (
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  client={project.client}
-                  created={project.created}
-                  href={project.href}
-                />
-              );
-            })}
-          </div>
-          {/* 
-            <div
-              id="custom-bento"
-              className="grid grid-cols-6 grid-rows-4 w-ful h-[100vh] gap-3"
-            >
-              <div className="bento-container col-span-2">
-                <Image
-                  src="/images/CJlogocompany.png"
-                  alt="Clipjiffy logo"
-                  width="100"
-                  height="100"
-                />
-              </div>
-              <div className="bento-container col-span-1"></div>
-              <div className="bento-container row-span-2 col-span-1"></div>
-              <div className="bento-container row-span-2 col-span-2"></div>
-              <div className="bento-container row-span-2 col-span-3"></div>
-              <div className="bento-container row-span-1 col-span-2"></div>
-              <div className="bento-container row-span-1 col-span-1"></div>
-              <div className="bento-container row-span-1 col-span-1"></div>
-              <div className="bento-container row-span-1 col-span-3"></div>
-              <div className="bento-container row-span-1 col-span-2"></div>
-            </div>*/}
+      <div className="pt-36 px-14">
+        <div className="text-5xl py-10" id="work">
+          Projects
         </div>
-        <div id="fun" className="text-5xl pt-40 pb-72">
-          Experiments here
+        <div className="grid grid-cols-2 gap-6">
+          {projects.map((project) => {
+            return (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                client={project.client}
+                created={project.created}
+                href={project.href}
+                src={project.src}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div className="text-5xl pt-40 pb-72 px-14">
+        <div className="text-5xl py-10" id="fun">
+          Fun
+        </div>
+        <div className="grid grid-cols-2 gap-6">
+          {experiments.map((experiment) => {
+            return (
+              <ProjectCard /*Redo*/
+                key={experiment.title}
+                title={experiment.title}
+                client={experiment.medium}
+                created={experiment.created}
+                href={experiment.href}
+                src={experiment.src}
+              />
+            );
+          })}
         </div>
       </div>
     </>

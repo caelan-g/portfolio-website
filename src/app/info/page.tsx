@@ -7,7 +7,7 @@ export default function Home() {
     <main className="px-14 pt-20 grid grid-cols-6">
       <div className="col-start-2 col-span-4 pb-32">
         <div className="flex justify-between">
-          <div className="text-5xl">Resume</div>
+          <div className="text-5xl">About Me</div>
           <Link
             href="/"
             className="text-neutral-500 hover:text-neutral-400 p-4 rounded-md text-lg transition-all flex"

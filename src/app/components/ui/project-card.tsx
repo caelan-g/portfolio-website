@@ -8,17 +8,24 @@ export default function ProjectCard({
   client,
   created,
   href,
+  src,
 }: {
   title: string;
   client: string;
   created: string;
   href: string;
+  src: string;
 }) {
   return (
-    <div className="bg-neutral-700 pt-5 px-5 flex-col">
-      <div className="text-2xl font-bold">{title}</div>
-      <div className="text-xl">{client}</div>
-      <div className="text-xl">{created}</div>
-    </div>
+    <Link
+      href={href}
+      className="bg-neutral-700 py-10 px-10 flex flex-col w-full h-[80vh] justify-end transition-all hover:-translate-y-1 bg-gradient-to-r from-cyan-500 to-blue-500"
+    >
+      <div className="text-4xl">{title}</div>
+      <div className="flex justify-between">
+        <div className="text-2xl">{client}</div>
+        <div className="text-2xl">{created}</div>
+      </div>
+    </Link>
   );
 }
