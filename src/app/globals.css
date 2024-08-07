@@ -15,7 +15,8 @@
   }
 
   .bento-container:hover {
-    scale: 1.05;
+    /* scale: 1.01; */
+    transform: translatey(-0.5rem);
   }
 }
 
@@ -35,14 +36,18 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  padding-left: 4rem /* 64px */;
-  padding-right: 4rem /* 64px */;
   --tw-bg-opacity: 1;
   background-color: rgb(23 23 23 / var(--tw-bg-opacity)) /* #171717 */;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @layer utilities {
