@@ -2,14 +2,17 @@
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { FlipWords } from "./components/ui/flip-words";
+import ProjectCard from "@/app/components/ui/project-card";
 import { AuroraBackground } from "@/app/components/ui/aurora-background";
 
 export default function Home() {
   const words = ["Hey", "Salut", "Nǐ hǎo", "G'day", "Hola", "Privet"];
-  const projects = [];
+  const projects = [
+    { title: "project1", client: "client1", created: "2024", href: "/" },
+    { title: "project2", client: "client2", created: "2023", href: "/" },
+  ];
 
   return (
     <>
@@ -27,7 +30,7 @@ export default function Home() {
           <div className="col-start-1 col-span-3">
             <div className="text-3xl md:text-7xl font-bold text-white">
               <FlipWords words={words} /> <br />
-              I'm Caelan
+              I&aposm Caelan
             </div>
             <div className="text-xl pt-3 text-neutral-400">
               Year 11 student based in{" "}
@@ -43,7 +46,20 @@ export default function Home() {
       <div className="pt-12">
         <div className="text-6xl font-bold leading-normal"></div>
 
-        <div id="work" className="text-5xl pt-36 pb-72">
+        <div id="work" className="text-5xl pt-36 pb-72 px-10">
+          <div className="grid grid-cols-2 gap-3">
+            {projects.map((project) => {
+              return (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  client={project.client}
+                  created={project.created}
+                  href={project.href}
+                />
+              );
+            })}
+          </div>
           {/* 
             <div
               id="custom-bento"

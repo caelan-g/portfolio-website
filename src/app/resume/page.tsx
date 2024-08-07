@@ -7,12 +7,12 @@ export default function Home() {
     <main className="p-5 grid grid-cols-6 grid-rows-5">
       <div className="col-start-2 col-span-4">
         <div className="flex justify-between">
-          <div className="text-5xl font-bold">Caelan's Resume</div>
+          <div className="text-5xl font-bold">Caelan&apos;s Resume</div>
           <Link
-            href="/"
-            className="text-neutral-500 hover:text-neutral-400 p-4 rounded-md text-lg transition-all"
+            href="/app"
+            className="text-neutral-500 hover:text-neutral-400 p-4 rounded-md text-lg transition-all flex"
           >
-            <ArrowLeftIcon /> Back
+            <ArrowLeftIcon className="size-8 pr-3" /> Back
           </Link>
         </div>
         <div className="text-2xl font-bold">Resume details</div>
