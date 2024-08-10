@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="absolute w-full z-10">
+      <body className={`${inter.className} w-full`}>
+        <div className="absolute z-10 w-full">
           <NavBar />
         </div>
         {children}

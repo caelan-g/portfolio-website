@@ -54,10 +54,10 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative gap-4 justify-center px-4 text-left grid grid-cols-5"
+          className="relative gap-4 justify-center md:px-4 px-10 text-left md:grid md:grid-cols-5 flex flex-col"
         >
-          <div className="col-start-1 col-span-3">
-            <div className="text-3xl md:text-7xl font-bold text-white">
+          <div className="md:col-start-1 md:col-span-3">
+            <div className="md:text-7xl text-5xl font-bold text-white">
               <FlipWords words={words} /> <br />
               {`I'm Caelan`}
             </div>
@@ -72,11 +72,11 @@ export default function Home() {
           </div>
         </motion.div>
       </AuroraBackground>
-      <div className="pt-36 px-14">
-        <div className="text-5xl py-10" id="work">
+      <div className="pt-36 md:px-14 px-4">
+        <div className="text-5xl py-10 md:px-0 px-4" id="work">
           Projects
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="md:grid md:grid-cols-2 flex flex-col gap-6">
           {projects.map((project) => {
             return (
               <ProjectCard
@@ -91,11 +91,11 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className="text-5xl pt-40 pb-72 px-14">
+      <div className="text-5xl pt-40 pb-72 px-4 md:px-14">
         <div className="text-5xl py-10" id="fun">
           Fun
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="md:grid md:grid-cols-2 flex flex-col gap-6">
           {experiments.map((experiment) => {
             return (
               <ProjectCard /*Redo*/
