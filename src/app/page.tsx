@@ -3,9 +3,9 @@ import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
-import { FlipWords } from "./components/ui/flip-words";
-import ProjectCard from "@/app/components/ui/project-card";
-import { AuroraBackground } from "@/app/components/ui/aurora-background";
+import { FlipWords } from "../components/ui/flip-words";
+import ProjectCard from "@/components/project-card";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export default function Home() {
   const words = ["Hey", "Salut", "Nǐ hǎo", "G'day", "Hola", "Privet"];
@@ -73,7 +73,7 @@ export default function Home() {
         </motion.div>
       </AuroraBackground>
       <div className="pt-36 md:px-14 px-4">
-        <div className="text-5xl py-10 md:px-0 px-4" id="work">
+        <div className="text-5xl py-10 md:px-0 px-4" id="projects">
           Projects
         </div>
         <div className="md:grid md:grid-cols-2 flex flex-col gap-6">

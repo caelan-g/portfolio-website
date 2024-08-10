@@ -3,11 +3,11 @@ import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { Bars3Icon } from "@heroicons/react/16/solid";
-import MenuDropdown from "@/app/components/ui/menu-dropdown";
+import MenuDropdown from "@/components/menu-dropdown";
 
 export default function NavBar() {
   const navLinks = [
-    { name: "Projects", href: "/#work" },
+    { name: "Projects", href: "/#projects" },
     { name: "Misc", href: "/#fun" },
     { name: "Info", href: "/info" },
     { name: "Resume", href: "/resume" },
@@ -21,7 +21,7 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="md:flex md:flex-row fixed w-full justify-between py-5 px-10 md:px-14 text-xl z-20">
+      <div className="fixed md:relative flex flex-row w-full justify-between py-5 px-10 md:px-14 text-xl z-20">
         <Link className="transition-all hover:underline" href="/">
           Caelan Gray
         </Link>
@@ -41,7 +41,7 @@ export default function NavBar() {
         </div>
         <div className="flex md:hidden gap-4 md:gap-16">
           <Bars3Icon className="size-6" onClick={hamburgerClick} />
-          {hamburger && <MenuDropdown />}
+          {hamburger && <MenuDropdown isOpen={hamburger} />}
         </div>
       </div>
     </>
