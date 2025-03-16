@@ -68,24 +68,28 @@ export default function Home() {
             width={500}
             height={200}
             className="w-full"
+            alt="Concept sketch"
           />
           <Image
             src="/images/furguard2.png "
             width={500}
             height={200}
             className="w-full"
+            alt="Concept sketch"
           />
           <Image
             src="/images/furguard3.png "
             width={500}
             height={200}
             className="w-full"
+            alt="Concept sketch"
           />
           <Image
             src="/images/furguard4.png "
             width={500}
             height={200}
             className="w-full"
+            alt="Concept sketch"
           />
         </div>
         <div className="text-2xl font-bold">Wiring Diagram</div>
@@ -94,6 +98,7 @@ export default function Home() {
           width={500}
           height={200}
           className="w-full"
+          alt="Wiring diagram"
         />
       </div>
     </main>
