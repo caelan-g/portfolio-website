@@ -6,16 +6,16 @@ export default function Home() {
   return (
     <main className="p-5 px-48 pt-24">
       <div className="flex-col flex gap-4">
-        <div className="text-5xl font-bold">{`Clipjiffy`}</div>
+        <div className="text-5xl font-bold">{`Edura`}</div>
         <p>
-          Built in 2023, Clipjiffy was my first dip into developing a static
-          website. Built entirely with HTML, CSS and JS and a touch of
-          bootstrap, Clipjiffy was my first attempt at a website.
+          Built in 2025, Edura was built with Flask, hosted on pythonanywhere.
+          Edura is a comprehensive study tracker web app for students, allowing
+          teachers to create classes and monitor students study progress.
         </p>
         <Link
           className="transition-all hover:underline col-start-7 font-bold"
           target="_blank"
-          href="https://www.clipjiffy.com"
+          href="https://caelang.pythonanywhere.com/"
         >
           Check it out
         </Link>

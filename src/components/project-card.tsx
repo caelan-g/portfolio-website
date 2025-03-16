@@ -19,7 +19,7 @@ export default function ProjectCard({
   return (
     <Link
       href={href}
-      className="bg-neutral-700 py-10 px-10 flex flex-col w-full md:h-[80vh] h-[60vh] justify-end transition-all hover:-translate-y-1 bg-gradient-to-r from-cyan-500 to-blue-500"
+      className="bg-neutral-700 py-10 px-10 flex flex-col w-full lg:h-[60vh] h-[20vh] justify-end transition-all hover:-translate-y-1 bg-gradient-to-r from-cyan-500 to-blue-500"
     >
       <div className="text-4xl">{title}</div>
       <div className="flex justify-between">

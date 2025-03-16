@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function MenuDropdown({ isOpen }: { isOpen: boolean }) {
   const navLinks = [
-    { name: "Projects", href: "/#work" },
+    { name: "Projects", href: "/#projects" },
     { name: "Misc", href: "/#fun" },
     { name: "Info", href: "/info" },
     { name: "Resume", href: "/resume" },

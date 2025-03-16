@@ -13,7 +13,7 @@ export default function Footer() {
           Caelan Gray
         </Link>
         <p className="col-start-1 col-span-2 row-start-2">
-          Updated 7th August 2024
+          Updated 16th March 2025
         </p>
         <Link
           className="transition-all hover:underline col-start-7 text-right text-white"

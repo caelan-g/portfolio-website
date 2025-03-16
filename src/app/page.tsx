@@ -3,7 +3,7 @@ import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
-import { FlipWords } from "../components/ui/flip-words";
+import { FlipWords } from "@/components/ui/flip-words";
 import ProjectCard from "@/components/project-card";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 
@@ -11,17 +11,24 @@ export default function Home() {
   const words = ["Hey", "Salut", "Nǐ hǎo", "G'day", "Hola", "Privet"];
   const projects = [
     {
-      title: "project1",
-      client: "client1",
-      created: "2024",
-      href: "/projects/clipjiffy",
+      title: "Edura",
+      client: "School Project",
+      created: "2025",
+      href: "/projects/edura",
       src: "/",
     },
     {
-      title: "project2",
-      client: "client2",
+      title: "FurGuard AI Dog Door",
+      client: "School Project",
+      created: "2024",
+      href: "/projects/furguard",
+      src: "/",
+    },
+    {
+      title: "Clipjiffy",
+      client: "me",
       created: "2023",
-      href: "/projects/",
+      href: "/projects/clipjiffy",
       src: "/",
     },
   ];
@@ -54,10 +61,10 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative gap-4 justify-center md:px-4 px-10 text-left md:grid md:grid-cols-5 flex flex-col"
+          className="relative gap-4 justify-center lg:px-4 px-10 text-left lg:grid lg:grid-cols-5 flex flex-col"
         >
-          <div className="md:col-start-1 md:col-span-3">
-            <div className="md:text-7xl text-5xl font-bold text-white">
+          <div className="lg:col-start-1 lg:col-span-3">
+            <div className="lg:text-7xl text-5xl font-bold text-white">
               <FlipWords words={words} /> <br />
               {`I'm Caelan`}
             </div>
@@ -72,11 +79,11 @@ export default function Home() {
           </div>
         </motion.div>
       </AuroraBackground>
-      <div className="pt-36 md:px-14 px-4">
-        <div className="text-5xl py-10 md:px-0 px-4" id="projects">
+      <div className="pt-36 lg:px-14 px-4">
+        <div className="text-5xl py-10 lg:px-0 px-5 font-bold" id="projects">
           Projects
         </div>
-        <div className="md:grid md:grid-cols-2 flex flex-col gap-6">
+        <div className="lg:grid lg:grid-cols-2 flex flex-col gap-6">
           {projects.map((project) => {
             return (
               <ProjectCard
@@ -91,11 +98,11 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className="text-5xl pt-40 pb-72 px-4 md:px-14">
-        <div className="text-5xl py-10" id="fun">
+      <div className="text-5xl pt-40 pb-72 px-4 lg:px-14">
+        <div className="text-5xl py-10 px-5 lg:px-0" id="fun">
           Fun
         </div>
-        <div className="md:grid md:grid-cols-2 flex flex-col gap-6">
+        <div className="lg:grid lg:grid-cols-2 flex flex-col gap-6">
           {experiments.map((experiment) => {
             return (
               <ProjectCard /*Redo*/
