@@ -21,7 +21,11 @@ export default function MenuDropdown({ isOpen }: { isOpen: boolean }) {
         <div className="flex flex-col gap-10">
           {navLinks.map((link) => {
             return (
-              <Link href={link.href} className="hover:underline text-4xl">
+              <Link
+                key={link.name}
+                href={link.href}
+                className="hover:underline text-4xl"
+              >
                 {link.name}
               </Link>
             );
