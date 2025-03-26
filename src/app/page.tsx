@@ -60,30 +60,19 @@ export default function Home() {
   return (
     <>
       <AuroraBackground>
-        <motion.div
-          initial={{ opacity: 0.0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="relative gap-4 justify-center lg:px-4 px-10 text-left lg:grid lg:grid-cols-5 flex flex-col"
-        >
-          <div className="lg:col-start-1 lg:col-span-3">
-            <div className="lg:text-7xl text-5xl font-bold text-white">
-              <FlipWords words={words} /> <br />
-              {`I'm Caelan`}
-            </div>
-            <div className="text-xl pt-3 text-neutral-400">
-              Year 12 student based in{" "}
-              <Link href="/" className="text-neutral-50">
-                Sydney, Australia
-              </Link>
-              . <br></br> Passion for app development and UI/UX design
-            </div>
+        <div className="lg:col-start-1 lg:col-span-3">
+          <div className="lg:text-7xl text-5xl font-bold text-white">
+            <FlipWords words={words} /> <br />
+            {`I'm Caelan`}
           </div>
-        </motion.div>
+          <div className="text-xl pt-3 text-neutral-400">
+            Year 12 student based in{" "}
+            <Link href="/" className="text-neutral-50">
+              Sydney, Australia
+            </Link>
+            . <br></br> Passion for app development and UI/UX design
+          </div>
+        </div>
       </AuroraBackground>
       <div className="pt-36 lg:px-14 px-4">
         <div className="text-5xl py-10 lg:px-0 px-5 font-bold" id="projects">
