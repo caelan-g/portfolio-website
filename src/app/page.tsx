@@ -12,21 +12,28 @@ export default function Home() {
   const projects = [
     {
       title: "Edura",
-      client: "School Project",
+      client: "Teacher-student study tracker",
       created: "2025",
       href: "/projects/edura",
       src: "/",
     },
     {
-      title: "FurGuard AI Dog Door",
-      client: "School Project",
+      title: "FurGuard",
+      client: "AI Dog Door",
       created: "2024",
       href: "/projects/furguard",
       src: "/",
     },
     {
+      title: "FTC Robotics",
+      client: "Barker Greybacks",
+      created: "2024",
+      href: "/projects/robotics",
+      src: "/",
+    },
+    {
       title: "Clipjiffy",
-      client: "me",
+      client: "Short-form content creation",
       created: "2023",
       href: "/projects/clipjiffy",
       src: "/",
@@ -35,7 +42,7 @@ export default function Home() {
   const experiments = [
     {
       title: "3d model",
-      medium: "blender",
+      medium: "Blender",
       created: "2024",
       href: "/misc/",
       src: "/",
@@ -69,12 +76,11 @@ export default function Home() {
               {`I'm Caelan`}
             </div>
             <div className="text-xl pt-3 text-neutral-400">
-              Year 11 student based in{" "}
+              Year 12 student based in{" "}
               <Link href="/" className="text-neutral-50">
                 Sydney, Australia
               </Link>
-              . <br></br> I enjoy learning and creating with the newest tech and
-              software.
+              . <br></br> Passion for app development and UI/UX design
             </div>
           </div>
         </motion.div>
@@ -99,7 +105,7 @@ export default function Home() {
         </div>
       </div>
       <div className="text-5xl pt-40 pb-72 px-4 lg:px-14">
-        <div className="text-5xl py-10 px-5 lg:px-0" id="fun">
+        <div className="text-5xl py-10 px-5 lg:px-0 font-bold" id="fun">
           Fun
         </div>
         <div className="lg:grid lg:grid-cols-2 flex flex-col gap-6">
