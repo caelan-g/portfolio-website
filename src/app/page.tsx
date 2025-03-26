@@ -60,17 +60,19 @@ export default function Home() {
   return (
     <>
       <AuroraBackground>
-        <div className="lg:col-start-1 lg:col-span-3">
-          <div className="lg:text-7xl text-5xl font-bold text-white">
-            <FlipWords words={words} /> <br />
-            {`I'm Caelan`}
-          </div>
-          <div className="text-xl pt-3 text-neutral-400">
-            Year 12 student based in{" "}
-            <Link href="/" className="text-neutral-50">
-              Sydney, Australia
-            </Link>
-            . <br></br> Passion for app development and UI/UX design
+        <div className="relative gap-4 lg:w-full lg:px-60 px-10 text-left flex flex-col">
+          <div className="">
+            <div className="lg:text-7xl text-5xl font-bold text-white">
+              <FlipWords words={words} /> <br />
+              {`I'm Caelan`}
+            </div>
+            <div className="text-xl pt-3 text-neutral-400">
+              Year 12 student based in{" "}
+              <Link href="/" className="text-neutral-50">
+                Sydney, Australia
+              </Link>
+              . <br></br> Passion for app development and UI/UX design
+            </div>
           </div>
         </div>
       </AuroraBackground>
