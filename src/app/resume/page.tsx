@@ -1,60 +1,65 @@
 import Image from "next/image";
+import ExperienceSection from "@/components/ui/experience-section";
+import { experienceType, experiences, activities } from "@/data/experiences";
 import Link from "next/link";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
-export default function Home() {
+export default function Resume() {
   return (
-    <main className="px-14 pt-20 grid grid-cols-6">
-      <div className="col-start-2 col-span-4 pb-32">
-        <div className="flex justify-between">
-          <div className="text-5xl">Resume</div>
-          <Link
-            href="/"
-            className="text-neutral-500 hover:text-neutral-400 p-4 rounded-md text-lg transition-all flex"
-          >
-            <ArrowLeftIcon className="size-8 pr-3" /> Back
-          </Link>
+    <main className="lg:px-48 px-4 pt-20">
+      <div className="bg-white grid grid-cols-5 lg:gap-0 text-black mb-12">
+        <div className="col-span-1 bg-gray-800 lg:pb-32 flex flex-col gap-4 px-4 py-16">
+          <Image
+            src="/images/caelangray.png"
+            alt="Caelan Gray"
+            width={150}
+            height={150}
+            className="rounded-full mx-auto"
+          />
         </div>
-        <div className="text-2xl">Resume details</div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-          autem quos quisquam! Nam, cum. Possimus, inventore sint? Similique,
-          optio ea molestiae, exercitationem dolorem possimus veniam, fugiat
-          tempora nesciunt dignissimos quos officia pariatur maxime esse
-          quisquam adipisci. Quae ex qui, officia minus natus sint tempore
-          ipsam, consequuntur aliquid eveniet iste, in quaerat! Vitae, totam?
-          Eveniet blanditiis repellendus labore fuga, unde quae voluptas
-          corporis in quo similique quia nesciunt dignissimos sunt eaque harum
-          facere architecto nihil natus, exercitationem corrupti et. Quo,
-          reiciendis cum! Placeat cupiditate mollitia exercitationem. Ab,
-          excepturi quaerat veniam dolores non velit fuga maxime, sapiente
-          quibusdam aut necessitatibus repellendus autem dolorem quod earum quia
-          esse officia aspernatur impedit animi quae eaque at! Cupiditate alias
-          velit voluptas libero blanditiis eveniet minus facilis quidem, fugiat
-          vel, eligendi tenetur dolor nulla veniam excepturi. Voluptates,
-          dolores et provident impedit, id totam sit neque fugiat maiores
-          suscipit saepe! Earum, perspiciatis eaque? Impedit quis maiores
-          deserunt, assumenda incidunt debitis ab magnam iste pariatur
-          cupiditate aliquid recusandae dolor ad sequi quas ipsum cum possimus.
-          Odit illum officiis modi suscipit laborum pariatur animi ratione porro
-          dolor perspiciatis cumque, debitis, at itaque iusto, sit ipsam veniam
-          voluptates saepe quidem rerum eaque similique consectetur. Illo optio
-          nisi sequi quaerat in quos dolorum, voluptatibus libero facilis
-          repellat recusandae modi ipsum nostrum numquam aliquam dolorem eius,
-          rerum tempore magnam possimus earum fuga, quo beatae. Ad, molestiae
-          veniam vel est, magni totam voluptatum cupiditate sint, unde assumenda
-          tempore! Necessitatibus eius ea, similique mollitia quo tempora quia
-          enim. Possimus unde natus magni aperiam eveniet sint minima dolores
-          earum iure provident ea nobis, consequuntur reiciendis illo rem ut
-          debitis, consectetur doloribus assumenda, dicta odio maiores
-          perferendis? Magnam nam laudantium facere quas maiores itaque, alias
-          nesciunt hic, animi amet ab debitis? Voluptates molestias nemo
-          possimus ducimus placeat rem, architecto pariatur tenetur repudiandae
-          perferendis temporibus aspernatur. Dolor obcaecati error asperiores
-          fuga laboriosam deleniti aperiam mollitia explicabo porro corrupti
-          omnis inventore, itaque cum, perspiciatis beatae labore ducimus ullam
-          reiciendis recusandae cupiditate accusamus sunt. Aperiam.
-        </p>
+        <div className="col-start-1 lg:col-start-2 col-span-5 lg:col-span-4 pb-32 lg:pr-16 lg:pl-10 px-2 py-4 lg:py-16">
+          <div className="text-5xl tracking-tighter">Caelan Gray</div>
+          <div className="text-2xl font-light">Student at Barker College</div>
+          <div className="space-y-12 py-4">
+            <section id="experience">
+              <div className="flex flex-row justify-between">
+                <h1 className="text-2xl font-semibold">Experience</h1>
+                <Link href="#activities">
+                  <button className="text-xs opacity-50 underline">
+                    Skip to Activities
+                  </button>
+                </Link>
+              </div>
+              {experiences.map((item: experienceType, index) => (
+                <ExperienceSection key={index} item={item} />
+              ))}
+            </section>
+            <section id="activities">
+              <div className="flex flex-row justify-between">
+                <h1 className="text-2xl font-semibold">
+                  Co-Curricular Activites
+                </h1>
+                <Link href="#references">
+                  <button className="text-xs opacity-50 underline">
+                    Skip to References
+                  </button>
+                </Link>
+              </div>
+              {activities.map((item: experienceType, index) => (
+                <ExperienceSection key={index} item={item} />
+              ))}
+            </section>
+            <section id="references">
+              <div className="flex flex-row justify-between">
+                <h1 className="text-2xl font-semibold">References</h1>
+                <Link href="/resume">
+                  <button className="text-xs opacity-50 underline">
+                    Back to top
+                  </button>
+                </Link>
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     </main>
   );

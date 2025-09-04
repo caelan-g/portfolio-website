@@ -1,119 +1,311 @@
 "use client";
-import { useScroll, useTransform } from "framer-motion";
-import { motion } from "framer-motion";
 import React from "react";
-import Link from "next/link";
+import { Timeline } from "@/components/timeline";
 import { FlipWords } from "@/components/ui/flip-words";
-import ProjectCard from "@/components/project-card";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+import BentoCard from "@/components/ui/bentocard";
+import Link from "next/link";
+import Keyboard from "@/components/ui/keyboard";
+import WIP from "@/components/ui/wip";
 
 export default function Home() {
-  const words = ["Hey", "Salut", "Nǐ hǎo", "G'day", "Hola", "Privet"];
-  const projects = [
+  const words = ["Hey,", "Salut,", "Nǐ hǎo,", "G'day,", "Hola,", "Privet,"];
+  const data = [
+    {
+      title: "Islands",
+      href: "/projects/islands",
+      content: (
+        <div>
+          <p className="mb-8 text-sm font-normal text-neutral-800 md:text-lg dark:text-neutral-200">
+            Built and launched islands.study, a gamified study tracking app with
+            generative island evolutions unique to each user.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="/images/islands/dashboarddesktop.jpg"
+              alt="islands.study dashboard image"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="/images/islands/coursesdesktop.jpg"
+              alt="islands.study courses image"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="/images/islands/archipelagodesktop.jpg"
+              alt="islands.study archipelago image"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/templates/startup-4.webp"
+              alt="islands.study startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
+        </div>
+      ),
+    },
     {
       title: "Edura",
-      client: "Teacher-student study tracker",
-      created: "2025",
       href: "/projects/edura",
-      src: "/",
+      content: (
+        <div>
+          <p className="mb-8 text-sm font-normal text-neutral-800 md:text-lg dark:text-neutral-200">
+            Built Edura, a student-teacher studying interface app with study
+            progress tracking, class management and task assignment features,
+            and was nominated to present at PyCon Australia 2025.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://assets.aceternity.com/pro/hero-sections.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/features-section.png"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/pro/bento-grids.png"
+              alt="bento template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/cards.png"
+              alt="cards template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
+        </div>
+      ),
     },
     {
-      title: "FurGuard",
-      client: "AI Dog Door",
-      created: "2024",
+      title: "Furguard",
       href: "/projects/furguard",
-      src: "/",
-    },
-    {
-      title: "FTC Robotics",
-      client: "Barker Greybacks",
-      created: "2024",
-      href: "/projects/robotics",
-      src: "/",
+      content: (
+        <div>
+          <p className="mb-8 text-sm font-normal text-neutral-800 md:text-lg dark:text-neutral-200">
+            Built FurGuard, a machine-learning powered mechatronic system,
+            trained on my dogs&apos; faces to recognize them and grant access
+            via an electromagnet locking/unlocking system.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://assets.aceternity.com/pro/hero-sections.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/features-section.png"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/pro/bento-grids.png"
+              alt="bento template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/cards.png"
+              alt="cards template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
+        </div>
+      ),
     },
     {
       title: "Clipjiffy",
-      client: "Short-form content creation",
-      created: "2023",
       href: "/projects/clipjiffy",
-      src: "/",
+      content: (
+        <div>
+          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            Deployed 5 new components on Aceternity today
+          </p>
+          <div className="mb-8">
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Card grid component
+            </div>
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Startup template Aceternity
+            </div>
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Random file upload lol
+            </div>
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Himesh Reshammiya Music CD
+            </div>
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Salman Bhai Fan Club registrations open
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://assets.aceternity.com/pro/hero-sections.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/features-section.png"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/pro/bento-grids.png"
+              alt="bento template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/cards.png"
+              alt="cards template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
+        </div>
+      ),
     },
   ];
   const experiments = [
     {
       title: "3d model",
       medium: "Blender",
-      created: "2024",
       href: "/misc/",
       src: "/",
+      rowSpan: 1,
+      colSpan: 2,
     },
     {
       title: "auto 2",
       client: "client2",
       medium: "IoT Device",
-      created: "2024",
       href: "/misc/",
       src: "/",
+      rowSpan: 2,
+      colSpan: 1,
+    },
+    {
+      title: "test",
+      client: "client2",
+      medium: "IoT Device",
+      href: "/misc/",
+      src: "/",
+      rowSpan: 1,
+      colSpan: 1,
+    },
+    {
+      title: "test",
+      client: "client2",
+      medium: "IoT Device",
+      href: "/misc/",
+      src: "/",
+      rowSpan: 1,
+      colSpan: 1,
+    },
+    {
+      title: "test",
+      client: "client2",
+      medium: "IoT Device",
+      href: "/misc/",
+      src: "/",
+      rowSpan: 1,
+      colSpan: 1,
+    },
+    {
+      title: "test",
+      client: "client2",
+      medium: "IoT Device",
+      href: "/misc/",
+      src: "/",
+      rowSpan: 1,
+      colSpan: 1,
+    },
+    {
+      title: "test",
+      client: "client2",
+      medium: "IoT Device",
+      href: "/misc/",
+      src: "/",
+      rowSpan: 1,
+      colSpan: 2,
     },
   ];
-
+  /*
   return (
     <>
-      <AuroraBackground>
-        <div className="relative gap-4 lg:w-full lg:px-60 px-10 text-left flex flex-col">
-          <div className="">
-            <div className="lg:text-7xl text-5xl font-bold text-white">
-              <FlipWords words={words} /> <br />
-              {`I'm Caelan`}
-            </div>
-            <div className="text-xl pt-3 text-neutral-400">
-              Year 12 student based in{" "}
-              <Link href="/" className="text-neutral-50">
-                Sydney, Australia
-              </Link>
-              . <br></br> Passion for app development and UI/UX design
-            </div>
+      <div className="relative gap-4 lg:w-full lg:grid lg:grid-cols-5 px-10 pt-48 text-left flex flex-col">
+        <div className="lg:col-start-2 lg:col-span-2">
+          <div className="lg:text-7xl text-5xl font-semibold tracking-tighter text-white ">
+            <FlipWords words={words} /> <br />
+            {`I'm Caelan`}
+          </div>
+          <div className="text-xl pt-3 text-neutral-400">
+            Year 12 student based in{" "}
+            <Link href="/" className="text-neutral-50">
+              Sydney, Australia
+            </Link>
+            . <br></br> Passion for app development, UI/UX design and surfing.
           </div>
         </div>
-      </AuroraBackground>
-      <div className="pt-36 lg:px-14 px-4">
-        <div className="text-5xl py-10 lg:px-0 px-5 font-bold" id="projects">
-          Projects
-        </div>
-        <div className="lg:grid lg:grid-cols-2 flex flex-col gap-6">
-          {projects.map((project) => {
-            return (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                client={project.client}
-                created={project.created}
-                href={project.href}
-                src={project.src}
-              />
-            );
-          })}
+        <div className="lg:col-start-4 lg:col-span-2 lg:block hidden">
+          <Keyboard />
         </div>
       </div>
-      <div className="text-5xl pt-40 pb-72 px-4 lg:px-14">
-        <div className="text-5xl py-10 px-5 lg:px-0 font-bold" id="fun">
-          Fun
-        </div>
-        <div className="lg:grid lg:grid-cols-2 flex flex-col gap-6">
-          {experiments.map((experiment) => {
-            return (
-              <ProjectCard /*Redo*/
-                key={experiment.title}
-                title={experiment.title}
-                client={experiment.medium}
-                created={experiment.created}
-                href={experiment.href}
-                src={experiment.src}
-              />
-            );
-          })}
+      <div className="relative w-full overflow-clip" id="timeline">
+        <Timeline data={data} />
+      </div>
+      <div className="relative w-full overflow-clip px-24 py-48" id="fun">
+        <div className="text-5xl tracking-tight text-white pb-8">Fun</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          {experiments.map((experiment) => (
+            <BentoCard
+              key={experiment.title}
+              title={experiment.title}
+              rowSpan={experiment.rowSpan}
+              colSpan={experiment.colSpan}
+              href={experiment.href}
+              src={experiment.src}
+            />
+          ))}
         </div>
       </div>
+    </>
+  );
+  */
+  return (
+    <>
+      <WIP />
     </>
   );
 }

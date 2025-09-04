@@ -7,8 +7,8 @@ import MenuDropdown from "@/components/menu-dropdown";
 
 export default function NavBar() {
   const navLinks = [
-    { name: "Projects", href: "/#projects" },
-    { name: "Misc", href: "/#fun" },
+    { name: "Projects", href: "/#timeline" },
+    { name: "Fun", href: "/#fun" },
     { name: "Info", href: "/info" },
     { name: "Resume", href: "/resume" },
   ];
@@ -21,7 +21,7 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="fixed md:absolute flex flex-row w-full justify-between py-5 px-10 md:px-14 text-xl z-20">
+      <div className="fixed md:relative flex flex-row w-full justify-between py-5 px-10 md:px-14 text-md z-20">
         <Link className="transition-all hover:underline" href="/">
           Caelan Gray
         </Link>
