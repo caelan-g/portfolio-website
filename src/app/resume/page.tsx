@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function Resume() {
   return (
-    <main className="lg:px-48 px-4 pt-20">
-      <div className="bg-white grid grid-cols-5 lg:gap-0 text-black mb-12">
-        <div className="col-span-1 bg-gray-800 lg:pb-32 flex flex-col gap-4 px-4 py-16">
+    <main className="lg:px-48 pt-20">
+      <div className="bg-white grid grid-cols-5 lg:gap-0 text-black mb-12 lg:p-0 px-4 pt-12">
+        <div className="col-span-1 lg:bg-gray-800 lg:pb-32 lg:flex flex-col gap-4 px-4 py-16 hidden">
           <Image
             src="/images/caelangray.png"
             alt="Caelan Gray"
@@ -17,8 +17,25 @@ export default function Resume() {
           />
         </div>
         <div className="col-start-1 lg:col-start-2 col-span-5 lg:col-span-4 pb-32 lg:pr-16 lg:pl-10 px-2 py-4 lg:py-16">
-          <div className="text-5xl tracking-tighter">Caelan Gray</div>
-          <div className="text-2xl font-light">Student at Barker College</div>
+          <div className="lg:block flex flex-row">
+            <div>
+              <div className="text-4xl lg:text-5xl tracking-tighter">
+                Caelan Gray
+              </div>
+              <div className="text-xl lg:text-2xl font-light">
+                Student at Barker College
+              </div>
+            </div>
+            <div className="col-span-1 lg:pb-32 flex flex-col gap-4 lg:hidden px-4">
+              <Image
+                src="/images/caelangray.png"
+                alt="Caelan Gray"
+                width={100}
+                height={100}
+                className="rounded-full mx-auto"
+              />
+            </div>
+          </div>
           <div className="space-y-12 py-4">
             <section id="experience">
               <div className="flex flex-row justify-between">
