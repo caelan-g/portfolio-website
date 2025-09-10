@@ -7,7 +7,7 @@ import MenuDropdown from "@/components/menu-dropdown";
 
 export default function NavBar() {
   const navLinks = [
-    { name: "Projects", href: "/#timeline" },
+    { name: "Projects", href: "/#projects" },
     { name: "Fun", href: "/#fun" },
     { name: "Info", href: "/info" },
     { name: "Resume", href: "/resume" },
@@ -21,7 +21,7 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="fixed md:relative flex flex-row w-full justify-between py-5 px-10 md:px-14 text-md z-20 backdrop-blur-sm bg-neutral-900/30">
+      <div className="fixed md:relative flex flex-row w-full justify-between py-5 px-10 md:px-14 text-md z-20 backdrop-blur-sm bg-neutral-900/30 lg:bg-transparent lg:backdrop-blur-none">
         <Link className="transition-all hover:underline" href="/">
           Caelan Gray
         </Link>
@@ -41,19 +41,19 @@ export default function NavBar() {
         </div>
         <div className="flex md:hidden gap-4 ml-auto text-right md:gap-16">
           <button onClick={hamburgerClick} className="relative z-30">
-            <div className="w-5 h-5 flex flex-col justify-center items-center">
+            <div className="w-4 h-4 flex flex-col justify-center items-center">
               <span
-                className={`block w-5 h-0.5 bg-white transition-all duration-300 ${
-                  hamburger ? "rotate-45 translate-y-0.5" : "mb-1"
+                className={`block w-4 h-0.5 bg-white transition-all duration-300 ${
+                  hamburger ? "rotate-45 translate-y-0.5" : "mb-[3.5px]"
                 }`}
               ></span>
               <span
-                className={`block w-5 h-0.5 bg-white transition-all duration-300 ${
-                  hamburger ? "opacity-0" : "mb-1"
+                className={`block w-4 h-0.5 bg-white transition-all duration-300 ${
+                  hamburger ? "opacity-0" : "mb-[3.5px]"
                 }`}
               ></span>
               <span
-                className={`block w-5 h-0.5 bg-white transition-all duration-300 ${
+                className={`block w-4 h-0.5 bg-white transition-all duration-300 ${
                   hamburger ? "-rotate-45 -translate-y-0.5" : ""
                 }`}
               ></span>

@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="lg:mx-0 mx-auto mt-2 lg:mt-0">
-          Updated 4th September 2025
+          Updated 11th September 2025
         </p>
       </div>
     </>

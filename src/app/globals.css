@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@750&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +19,12 @@
   .bento-container:hover {
     /* scale: 1.01; */
     transform: translatey(-0.5rem);
+  }
+
+  .logo {
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.05em;
   }
 }
 
@@ -54,4 +62,50 @@ html {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  /* fallback for older browsers */
+  image-rendering: crisp-edges;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(1.5);
+  }
+  50% {
+    filter: brightness(1);
+  }
+  75% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  /* fallback for older browsers */
+  image-rendering: crisp-edges;
+}
+
+.floating {
+  animation: float 5s ease-in-out infinite;
 }
