@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.className} w-full overflow-x-hidden bg-neutral-900 tracking-tight text-white`}
+        className={`${inter.className} w-screen overflow-x-hidden bg-neutral-900 tracking-tight text-white`}
       >
         <NavBar />
         {children}
