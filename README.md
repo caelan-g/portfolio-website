@@ -1,4 +1,4 @@
-# Caelan Gray Portfolio Website
+# Portfolio Website
 
 My portfolio website, built with Next.js, Tailwind CSS, and React.
 
