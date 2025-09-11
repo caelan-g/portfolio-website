@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-export default function DogDoor() {
+export default function FurGuard() {
   return (
-    <section className="w-screen h-screen flex flex-col px-8 lg:px-48  py-36 bg-white text-black">
+    <section className="w-screen h-screen flex flex-col px-8 lg:px-48 py-36 bg-white text-black">
       <div className="w-full flex items-baseline">
-        <div className="mr-[30rem]">
+        <div className="lg:mr-[30rem]">
           <div className="text-sm text-neutral-500">2023 - 2024</div>
-          <div className="text-6xl tracking-tighter font-semibold">
+          <div className="text-4xl lg:text-6xl tracking-tighter font-semibold">
             FurGuard
           </div>
           <p className="text-md font-normal text-neutral-800 ">

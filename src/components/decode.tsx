@@ -7,9 +7,11 @@ export default function Decode() {
   return (
     <section className="w-screen h-screen flex flex-col px-8 lg:px-48  py-36 bg-gray-50 text-black">
       <div className="w-full flex items-baseline">
-        <div className="mr-[30rem]">
+        <div className="lg:mr-[30rem]">
           <div className="text-sm text-neutral-500">2025 - Present</div>
-          <div className="text-6xl tracking-tighter font-semibold">Decode</div>
+          <div className="text-4xl lg:text-6xl tracking-tighter font-semibold">
+            Decode
+          </div>
           <p className="text-md font-normal text-neutral-800 ">
             Currently working in a team of 3 on Decode, a scouting app for FTC
             robotics teams to track and analyze match data to improve

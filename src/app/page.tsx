@@ -3,7 +3,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import React from "react";
 import Islands from "@/components/islands";
 import Edura from "@/components/edura";
-import DogDoor from "@/components/dogdoor";
+import FurGuard from "@/components/furguard";
 import Decode from "@/components/decode";
 import { FlipWords } from "@/components/ui/flip-words";
 import BentoCard from "@/components/ui/bentocard";
@@ -38,16 +38,16 @@ export default function Home() {
         {/* <div className="lg:col-start-4 lg:col-span-2 lg:block hidden">
           <Keyboard />
         </div> */}
-        <div className="absolute bottom-20 text-xs w-full flex justify-center text-neutral-600 ">
+        <div className="absolute bottom-20 text-xs lg:w-full flex justify-center text-neutral-600 ">
           <ArrowDownIcon className="h-4 w-4 mr-1 animate-bounce" />
           Scroll for projects!
         </div>
       </section>
 
-      <section id="projects">
+      <section id="projects" className="w-screen overflow-x-hidden">
         <Islands />
         <Edura />
-        <DogDoor />
+        <FurGuard />
         <Decode />
       </section>
       <div className="relative w-full overflow-clip px-24 py-48" id="fun">

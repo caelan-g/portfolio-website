@@ -19,7 +19,7 @@ export default function Resume() {
         <div className="col-start-1 lg:col-start-2 col-span-5 lg:col-span-4 pb-32 lg:pr-16 lg:pl-10 px-2 py-4 lg:py-16">
           <div className="lg:block flex flex-row">
             <div>
-              <div className="text-4xl lg:text-5xl tracking-tighter">
+              <div className="text-4xl font-semibold lg:text-5xl tracking-tight">
                 Caelan Gray
               </div>
               <div className="text-xl lg:text-2xl font-light">
