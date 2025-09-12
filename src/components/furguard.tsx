@@ -6,11 +6,11 @@ export default function FurGuard() {
       <div className="w-full flex items-baseline">
         <div className="lg:mr-[30rem]">
           <div className="text-sm text-neutral-500">2023 - 2024</div>
-          <div className="text-4xl lg:text-6xl tracking-tighter font-semibold">
-            FurGuard
+          <div className="text-4xl lg:text-6xl tracking-tighter font-semibold furguardlogo mb-1">
+            furguard
           </div>
           <p className="text-md font-normal text-neutral-800 ">
-            Built FurGuard, a machine-learning powered mechatronic system,
+            Built furguard, a machine-learning powered mechatronic system,
             trained on my dogs&apos; faces to recognize and grant access via an
             electromagnet locking/unlocking system.
           </p>

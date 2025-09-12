@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@750&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -23,6 +24,12 @@
 
   .logo {
     font-family: "Merriweather Sans", sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.07em;
+  }
+
+  .furguardlogo {
+    font-family: "Oxygen", sans-serif;
     font-weight: 800;
     letter-spacing: -0.05em;
   }
