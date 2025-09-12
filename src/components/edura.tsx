@@ -57,23 +57,16 @@ export default function Edura() {
           height={1000}
           className="block lg:hidden rounded-[.5rem] border-gray-200 border-4 shadow-xl inset-shadow min-w-[10rem]object-cover object-top-left"
         />
-        <div className="">
+        <div className="flex flex-col">
           <Image
-            src="/images/edura/viewclass.jpg"
+            src="/images/edura/presentation.png"
             alt="Island"
             width={800}
             height={400}
             className="object-cover w-full border-gray-200 border-4 shadow-xl rounded-[.5rem]"
           />
-        </div>
-        <div className="">
-          <Image
-            src="/images/edura/classesdesktop.jpg"
-            alt="Island"
-            width={800}
-            height={400}
-            className="hidden lg:block object-cover w-full object-top border-gray-200 border-4 shadow-xl rounded-[.5rem]"
-          />
+
+          <p className="text-xs text-gray-500">Presenting at PyCon</p>
         </div>
       </div>
     </section>
