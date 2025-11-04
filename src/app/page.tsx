@@ -12,13 +12,14 @@ import Keyboard from "@/components/ui/keyboard";
 import { experiments } from "@/data/projects";
 import { ArrowDownIcon } from "@heroicons/react/16/solid";
 import WIP from "@/components/ui/wip";
+import Image from "next/image";
 
 export default function Home() {
   const words = ["Hey,", "Salut,", "Nǐ hǎo,", "G'day,", "Hola,", "Privet,"];
 
   return (
     <>
-      <AuroraBackground className="absolute top-0">
+      <AuroraBackground className="absolute hidden top-0">
         <div className="flex w-screen h-screen"></div>
       </AuroraBackground>
       <section className="relative gap-4 lg:w-full h-screen lg:grid lg:grid-cols-5 px-10 pt-48 text-left flex flex-col">
@@ -35,6 +36,11 @@ export default function Home() {
             . <br></br> Passion for app development, UI/UX design and surfing.
           </div>
         </div>
+
+        <div className="lg:col-start-3 lg:ml-48 w-screen scale-[.6] lg:right-auto right-[7rem] lg:scale-100 relative lg:absolute lg:w-[40rem] lg:mt-48 mt-12">
+          <Keyboard />
+        </div>
+
         {/* <div className="lg:col-start-4 lg:col-span-2 lg:block hidden">
           <Keyboard />
         </div> */}
