@@ -8,10 +8,11 @@ export default function Keyboard() {
 
   const tiles = [
     {
-      href: "/#projects",
-      src: "/images/projecttile.png",
-      alt: "Project",
-      classes: "w-[12.7rem] left-[16.8rem] top-[6.8rem]",
+      href: "https://www.linkedin.com/in/caelan-gray-720965229/",
+      external: true,
+      src: "/images/linkedtile.png",
+      alt: "Linked",
+      classes: "w-[12rem] left-[11.1rem] top-[.32rem]",
     },
     {
       href: "https://github.com/caelan-g",
@@ -21,17 +22,18 @@ export default function Keyboard() {
       classes: "w-[12.05rem] left-[20.8rem] top-[2.05rem]",
     },
     {
-      href: "https://www.linkedin.com/in/caelan-gray-720965229/",
-      external: true,
+      href: "/resume",
+
       src: "/images/resumetile.png",
       alt: "Resume",
       classes: "w-[12.7rem] left-[6.7rem] top-[4.9rem]",
     },
+
     {
       href: "/#projects",
-      src: "/images/linkedtile.png",
-      alt: "Linked",
-      classes: "w-[12rem] left-[11.1rem] top-[.32rem]",
+      src: "/images/projecttile.png",
+      alt: "Project",
+      classes: "w-[12.7rem] left-[16.8rem] top-[6.8rem]",
     },
   ];
 
