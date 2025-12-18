@@ -13,6 +13,7 @@ import { experiments } from "@/data/projects";
 import { ArrowDownIcon } from "@heroicons/react/16/solid";
 import WIP from "@/components/ui/wip";
 import Image from "next/image";
+import { BentoPortfolio } from "@/components/ui/bento";
 
 export default function Home() {
   const words = ["Hey,", "Salut,", "Nǐ hǎo,", "G'day,", "Hola,", "Privet,"];
@@ -56,26 +57,9 @@ export default function Home() {
         <FurGuard />
         <Decode />
       </section>
-      <div className="relative w-full overflow-clip px-24 py-48" id="fun">
+      <section className="relative w-full overflow-clip" id="fun">
         <WIP />
-        {/*         
-        <div className="text-5xl tracking-tight text-white pb-8 font-semibold">
-          Fun
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-          {experiments.map((experiment) => (
-            <BentoCard
-              key={experiment.title}
-              title={experiment.title}
-              rowSpan={experiment.rowSpan}
-              colSpan={experiment.colSpan}
-              href={experiment.href}
-              src={experiment.src}
-            />
-          ))}
-        </div>
-         */}
-      </div>
+      </section>
     </>
   );
 }

@@ -13,14 +13,14 @@ export default function Edura() {
           <div className="text-4xl lg:text-6xl logo">Edura</div>
           <p className="text-md font-normal text-neutral-800 ">
             Built Edura, a student-teacher studying interface app with study
-            progress tracking, class management and task assignment features,
-            and was nominated to present at PyCon Australia 2025.{" "}
+            progress tracking, class management and task assignment features.
+            Nominated to present Edura at PyCon Australia 2025.{" "}
           </p>
           <div className="mt-2">
             <Links githubLink={githubLink} demoLink={demoLink} />
           </div>
         </div>
-        <div className="w-1/2 absolute right-24 hidden lg:flex flex-row mt-36">
+        <div className="w-1/2 absolute right-24 hidden lg:flex flex-row mt-[9.2rem]">
           <div className="z-20 mx-auto text-center hidden lg:block relative">
             <Image
               src="/images/edura/teachertasksmobile.jpg"
@@ -36,7 +36,7 @@ export default function Edura() {
               alt="Edura desktop dashboard"
               width={1000}
               height={1000}
-              className="rounded-[.5rem] border-gray-200 border-4 shadow-xl inset-shadow min-w-[40rem] h-[30rem] object-cover object-top-left"
+              className="rounded-[.5rem] border-gray-200  shadow-xl inset-shadow min-w-[40rem] h-[30rem] object-cover object-top-left"
             />
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function Edura() {
           alt="Edura desktop dashboard"
           width={1000}
           height={1000}
-          className="block lg:hidden rounded-[.5rem] border-gray-200 border-4 shadow-xl inset-shadow min-w-[10rem]object-cover object-top-left"
+          className="block lg:hidden rounded-[.5rem] border-gray-200 shadow-xl inset-shadow min-w-[10rem]object-cover object-top-left"
         />
         <div className="flex flex-col">
           <Image
@@ -63,7 +63,7 @@ export default function Edura() {
             alt="Island"
             width={800}
             height={400}
-            className="object-cover w-full border-gray-200 border-4 shadow-xl rounded-[.5rem]"
+            className="object-cover w-full border-gray-200shadow-xl rounded-[.5rem]"
           />
 
           <p className="text-xs text-gray-500">Presenting at PyCon</p>
