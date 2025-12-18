@@ -20,17 +20,18 @@ export default function Islands() {
           <div className="mt-2">
             <Links githubLink={githubLink} demoLink={demoLink} />
           </div>
-        </div>
-        <div className="lg:absolute left-36 w-full lg:w-1/2 z-10">
-          <Image
-            src="/images/islands/islandexmp.png"
-            alt="Island"
-            width={1024}
-            height={512}
-            className="pixelated floating pointer-events-none select-none w-full"
-            unoptimized
-            draggable={false}
-          />
+
+          <div className="lg:absolute left-36 w-full lg:w-1/2 z-10">
+            <Image
+              src="/images/islands/islandexmp.png"
+              alt="Island"
+              width={1024}
+              height={512}
+              className="pixelated floating pointer-events-none select-none w-full"
+              unoptimized
+              draggable={false}
+            />
+          </div>
         </div>
       </div>
       <div className="flex lg:flex-col flex-col col-span-full lg:col-span-2 gap-4 mt-6 w-full">
