@@ -9,7 +9,6 @@ export default function NavBar() {
   const navLinks = [
     { name: "Projects", href: "/#projects" },
     { name: "Fun", href: "/#fun" },
-    { name: "Info", href: "/info" },
     { name: "Resume", href: "/resume" },
   ];
 
@@ -21,8 +20,11 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="fixed md:relative flex flex-row w-full justify-between py-5 px-10 md:px-14 text-md z-20 backdrop-blur-sm bg-neutral-900/30 lg:bg-transparent lg:backdrop-blur-none">
-        <Link className="transition-all hover:underline" href="/">
+      <div className="fixed md:relative flex flex-row w-full justify-between py-4 md:py-5 px-10 md:px-14 text-md z-20 backdrop-blur-sm bg-neutral-900 lg:bg-transparent lg:backdrop-blur-none">
+        <Link
+          className="transition-all hover:underline hidden md:block"
+          href="/"
+        >
           Caelan Gray
         </Link>
         <div className="hidden md:flex gap-4 md:gap-16">

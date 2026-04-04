@@ -11,8 +11,7 @@ export default function MenuDropdown({
 }) {
   const navLinks = [
     { name: "Projects", href: "/#projects" },
-    { name: "Misc", href: "/#fun" },
-    { name: "Info", href: "/info" },
+    { name: "Fun", href: "/#fun" },
     { name: "Resume", href: "/resume" },
   ];
 

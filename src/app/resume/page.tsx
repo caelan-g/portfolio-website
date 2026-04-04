@@ -1,6 +1,11 @@
 import Image from "next/image";
 import ExperienceSection from "@/components/ui/experience-section";
-import { experienceType, experiences, activities } from "@/data/experiences";
+import {
+  experienceType,
+  experiences,
+  activities,
+  education,
+} from "@/data/experiences";
 import Link from "next/link";
 
 export default function Resume() {
@@ -23,7 +28,7 @@ export default function Resume() {
                 Caelan Gray
               </div>
               <div className="text-xl lg:text-2xl font-light">
-                Student at Barker College
+                Incoming Freshamn at Harvard University
               </div>
             </div>
             <div className="col-span-1 lg:pb-32 flex flex-col gap-4 lg:hidden px-4">
@@ -40,13 +45,26 @@ export default function Resume() {
             <section id="experience">
               <div className="flex flex-row justify-between">
                 <h1 className="text-2xl font-semibold">Experience</h1>
+                <Link href="#education">
+                  <button className="text-xs opacity-50 underline">
+                    Skip to Education
+                  </button>
+                </Link>
+              </div>
+              {experiences.map((item: experienceType, index) => (
+                <ExperienceSection key={index} item={item} />
+              ))}
+            </section>
+            <section id="education">
+              <div className="flex flex-row justify-between">
+                <h1 className="text-2xl font-semibold">Education</h1>
                 <Link href="#activities">
                   <button className="text-xs opacity-50 underline">
                     Skip to Activities
                   </button>
                 </Link>
               </div>
-              {experiences.map((item: experienceType, index) => (
+              {education.map((item: experienceType, index) => (
                 <ExperienceSection key={index} item={item} />
               ))}
             </section>
@@ -65,6 +83,7 @@ export default function Resume() {
                 <ExperienceSection key={index} item={item} />
               ))}
             </section>
+
             <section id="references">
               <div className="flex flex-row justify-between">
                 <h1 className="text-2xl font-semibold">References</h1>
@@ -74,6 +93,7 @@ export default function Resume() {
                   </button>
                 </Link>
               </div>
+              <div className="">References availabe upon request.</div>
             </section>
           </div>
         </div>

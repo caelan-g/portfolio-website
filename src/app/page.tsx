@@ -30,11 +30,11 @@ export default function Home() {
             {`I'm Caelan`}
           </div>
           <div className="text-xl pt-3 text-neutral-400">
-            Year 12 student based in{" "}
+            Incoming Freshman at Harvard based in{" "}
             <Link href="/" className="text-neutral-50">
               Sydney, Australia
             </Link>
-            . <br></br> Passion for app development, UI/UX design and surfing.
+            . <br></br> Passion for building apps, UI/UX design, and surfing.
           </div>
         </div>
 
@@ -45,17 +45,16 @@ export default function Home() {
         {/* <div className="lg:col-start-4 lg:col-span-2 lg:block hidden">
           <Keyboard />
         </div> */}
-        <div className="absolute bottom-20 text-xs lg:w-full flex justify-center text-neutral-600 ">
+        <div className="absolute bottom-5 lg:bottom-20 text-xs lg:w-full flex justify-center text-neutral-600 ">
           <ArrowDownIcon className="h-4 w-4 mr-1 animate-bounce" />
           Scroll for projects!
         </div>
       </section>
 
-      <section id="projects" className="w-screen overflow-x-hidden">
+      <section id="projects" className="w-screen">
         <Islands />
         <Edura />
         <FurGuard />
-        <Decode />
       </section>
       <section className="relative w-full overflow-clip" id="fun">
         <WIP />

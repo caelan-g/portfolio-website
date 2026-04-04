@@ -28,6 +28,28 @@ export const experiences: experienceType[] = [
   },
 ];
 
+export const education: experienceType[] = [
+  {
+    date: "2026 - 2030",
+    location: "MA, USA",
+    title: "Harvard University",
+    content: [
+      "Pursuing a Bachelor's Degree, intending to concentrate in Computer Science",
+    ],
+  },
+  {
+    date: "2026 - 2026",
+    location: "NSW, Australia",
+    title: "University of New South Wales",
+    content: [
+      "Pursued a Bachelor of Software Engineering as a Co-op Scholar",
+      "Devsoc Society Subcommittee Member, operating as a web developer for Freerooms",
+      "Co-op Society IT Subcommittee Member, working on upkeeping IT infrastructure for the Co-op society",
+      "Withdrew from UNSW to pursue an education at Harvard University",
+    ],
+  },
+];
+
 export const activities: experienceType[] = [
   {
     date: "2024 - Present",
@@ -51,7 +73,7 @@ export const activities: experienceType[] = [
     ],
   },
   {
-    date: "2022 - Present",
+    date: "2022 - 2025",
     location: "Duke of Edinburgh | Australia",
     title: "Gold Duke of Edinburgh",
     content: [
