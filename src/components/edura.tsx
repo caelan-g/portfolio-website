@@ -6,7 +6,7 @@ export default function Edura() {
   const githubLink = "https://github.com/caelan-g/edura";
   const demoLink = "https://caelang.pythonanywhere.com/";
   return (
-    <section className="w-screen flex flex-col px-8 lg:px-48  py-36 bg-gray-100 text-black">
+    <section className="w-screen flex flex-col px-8 lg:px-48 min-h-screen py-24 lg:py-36 bg-gray-100 text-black">
       <div className="w-full flex items-baseline">
         <div className="lg:mr-[30rem]">
           <div className="text-sm text-neutral-500">2024 - 2025</div>

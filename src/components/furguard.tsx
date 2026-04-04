@@ -13,8 +13,8 @@ export default function FurGuard() {
   };
 
   return (
-    <section className="w-screen min-h-screen flex flex-col px-8 lg:px-48 py-36 bg-white text-black">
-      <div className="w-full grid grid-cols-5 gap-8">
+    <section className="w-screen flex flex-col px-8 lg:px-48 min-h-screen bg-white text-black">
+      <div className="w-full grid grid-cols-5 gap-8 py-12 lg:py-36">
         <div className="lg:mr-[30rem] col-span-full lg:col-span-3 w-full">
           <div className="text-sm text-neutral-500">2023 - 2024</div>
           <div className="text-4xl lg:text-6xl tracking-tighter font-semibold furguardlogo mb-1">
@@ -45,7 +45,7 @@ export default function FurGuard() {
                   "object-contain lg:flex hidden  w-[35rem] hover:translate-y-4 transition-all cursor-pointer",
                   mainOpen
                     ? "opacity-100 pointer-events-auto translate-y-0"
-                    : "opacity-0 pointer-events-none -translate-y-36"
+                    : "opacity-0 pointer-events-none -translate-y-36",
                 )}
                 onClick={handleMainClick}
               />
@@ -69,7 +69,7 @@ export default function FurGuard() {
                   "object-contain relative left-0 top-12 lg:flex hidden  w-[12rem] hover:translate-y-4 transition-all cursor-pointer",
                   secondOpen
                     ? "opacity-100 pointer-events-auto translate-y-0"
-                    : "opacity-0 pointer-events-none -translate-y-36"
+                    : "opacity-0 pointer-events-none -translate-y-36",
                 )}
                 onClick={handleSecondClick}
               />

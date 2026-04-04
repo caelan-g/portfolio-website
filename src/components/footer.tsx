@@ -71,9 +71,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <p className="lg:mx-0 mx-auto mt-2 lg:mt-0">
-          Updated 4th November 2025
-        </p>
+        <p className="lg:mx-0 mx-auto mt-2 lg:mt-0">Updated 3rd April 2026</p>
       </div>
     </>
   );

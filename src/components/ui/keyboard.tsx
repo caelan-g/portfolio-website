@@ -40,7 +40,7 @@ export default function Keyboard() {
   // random delays (ms) per tile, stable for the component lifetime
   const delaysMs = useMemo(
     () => tiles.map(() => Math.floor(Math.random() * 400)),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function Keyboard() {
     const duration = 300; // matches duration-300
     const clearT = setTimeout(
       () => setDelaysActive(false),
-      50 + maxDelay + duration
+      50 + maxDelay + duration,
     );
 
     return () => {
@@ -62,7 +62,7 @@ export default function Keyboard() {
   }, [delaysMs]);
 
   return (
-    <div>
+    <>
       <div className="absolute my-auto w-[40rem] ">
         <Image
           src="/images/backplate.png"
@@ -120,6 +120,6 @@ export default function Keyboard() {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
