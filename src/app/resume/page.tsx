@@ -28,7 +28,7 @@ export default function Resume() {
                 Caelan Gray
               </div>
               <div className="text-xl lg:text-2xl font-light">
-                Incoming Freshamn at Harvard University
+                Incoming Freshman at Harvard University
               </div>
             </div>
             <div className="col-span-1 lg:pb-32 flex flex-col gap-4 lg:hidden px-4">

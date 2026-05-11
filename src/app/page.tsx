@@ -14,6 +14,7 @@ import { ArrowDownIcon } from "@heroicons/react/16/solid";
 import WIP from "@/components/ui/wip";
 import Image from "next/image";
 import { BentoPortfolio } from "@/components/ui/bento";
+import { StepBlock } from "@/components/ui/step-block";
 
 export default function Home() {
   const words = ["Hey,", "Salut,", "Nǐ hǎo,", "G'day,", "Hola,", "Privet,"];
@@ -25,16 +26,22 @@ export default function Home() {
       </AuroraBackground>
       <section className="relative gap-4 lg:w-full h-screen lg:grid lg:grid-cols-5 px-10 pt-48 text-left flex flex-col">
         <div className="lg:col-start-2 lg:col-span-2">
-          <div className="lg:text-7xl text-5xl font-semibold tracking-tighter text-white ">
-            <FlipWords words={words} /> <br />
-            {`I'm Caelan`}
+          <div className="lg:text-7xl text-5xl font-semibold tracking-tighter text-white flex flex-col">
+            <StepBlock delay={0.5}>
+              <FlipWords words={words} />
+            </StepBlock>
+            <StepBlock delay={1.5}>{`I'm Caelan`}</StepBlock>
           </div>
-          <div className="text-xl pt-3 text-neutral-400">
-            Incoming Freshman at Harvard based in{" "}
-            <Link href="/" className="text-neutral-50">
-              Sydney, Australia
-            </Link>
-            . <br></br> Passion for building apps, UI/UX design, and surfing.
+
+          <div className="text-xl pt-3 text-neutral-400 flex flex-col">
+            <StepBlock delay={2.5}>
+              Incoming freshman at Harvard from{" "}
+              <Link href="/" className="text-neutral-50">
+                Sydney, Australia
+              </Link>
+              . <br /> Passion for building out side projects, UI/UX design, and
+              surfing.
+            </StepBlock>
           </div>
         </div>
 
@@ -45,9 +52,12 @@ export default function Home() {
         {/* <div className="lg:col-start-4 lg:col-span-2 lg:block hidden">
           <Keyboard />
         </div> */}
+
         <div className="absolute bottom-5 lg:bottom-20 text-xs lg:w-full flex justify-center text-neutral-600 ">
-          <ArrowDownIcon className="h-4 w-4 mr-1 animate-bounce" />
-          Scroll for projects!
+          <StepBlock delay={2} className="flex">
+            <ArrowDownIcon className="h-4 w-4 mr-1 animate-bounce" />
+            Scroll for projects!
+          </StepBlock>
         </div>
       </section>
 
