@@ -66,7 +66,7 @@ export default function MenuDropdown({
 
           {/* Footer */}
           <div className="p-6 border-t border-neutral-700">
-            <p className="text-sm text-neutral-500">© 2024 Caelan Gray</p>
+            <p className="text-sm text-neutral-500">© 2026 Caelan Gray</p>
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ export default function Home() {
       <AuroraBackground className="absolute hidden top-0">
         <div className="flex w-screen h-screen"></div>
       </AuroraBackground>
-      <section className="relative gap-4 lg:w-full h-screen lg:grid lg:grid-cols-5 px-10 pt-48 text-left flex flex-col">
+      <section className="relative gap-4 lg:w-full min-h-screen lg:grid lg:grid-cols-5 px-10 md:pt-48 pt-24 text-left flex flex-col">
         <div className="lg:col-start-2 lg:col-span-2">
           <div className="lg:text-7xl text-5xl font-semibold tracking-tighter text-white flex flex-col">
             <StepBlock delay={0.5}>
