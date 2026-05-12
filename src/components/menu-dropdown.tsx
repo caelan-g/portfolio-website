@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { ChevronRightIcon } from "@heroicons/react/16/solid";
 
 export default function MenuDropdown({
   isOpen,
@@ -10,6 +11,7 @@ export default function MenuDropdown({
   onClose: () => void;
 }) {
   const navLinks = [
+    { name: "Home", href: "/" },
     { name: "Projects", href: "/#projects" },
     { name: "Fun", href: "/#fun" },
     { name: "Resume", href: "/resume" },
@@ -55,9 +57,7 @@ export default function MenuDropdown({
                 >
                   <span className="flex items-center justify-between">
                     {link.name}
-                    <span className="text-neutral-500 group-hover:text-neutral-300 transition-colors">
-                      →
-                    </span>
+                    <ChevronRightIcon className="w-4 h-4" />
                   </span>
                 </Link>
               ))}

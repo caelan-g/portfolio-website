@@ -20,7 +20,7 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="fixed md:relative flex flex-row w-full justify-between py-4 md:py-5 px-10 md:px-14 text-md z-20 backdrop-blur-sm bg-neutral-900 lg:bg-transparent lg:backdrop-blur-none">
+      <div className="fixed md:relative flex flex-row w-full justify-between py-4 md:py-5 px-10 md:px-14 text-md z-20 lg:bg-transparent lg:backdrop-blur-none">
         <Link
           className="transition-all hover:underline hidden md:block"
           href="/"
