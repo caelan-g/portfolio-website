@@ -16,7 +16,7 @@ export default function Islands() {
     <section className="w-screen grid grid-cols-5 gap-8 px-8 lg:px-48 py-12 lg:py-36 bg-gray-50 text-black min-h-screen">
       <div className="w-full lg:flex-row flex-col flex items-start col-span-5 lg:col-span-3">
         <div className="">
-          <div className="text-sm text-neutral-500">2025 - Present</div>
+          <div className="text-sm text-neutral-500">2025 - 2026</div>
           <div
             className={cn(
               `text-4xl lg:text-6xl font-bold tracking-[-.07em] animate-fade-in ${dmSans.variable} font-[family-name:var(--font-dm-sans)]`,

@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Resume() {
   return (
-    <main className="lg:px-48 pt-20">
+    <main className="lg:px-48 md:pt-20">
       <div className="bg-white grid grid-cols-5 lg:gap-0 text-black mb-12 lg:p-0 px-4 pt-12">
         <div className="col-span-1 lg:bg-gray-800 lg:pb-32 lg:flex flex-col gap-4 px-4 py-16 hidden">
           <Image

@@ -42,7 +42,10 @@ export default function NavBar() {
           })}
         </div>
         <div className="flex md:hidden gap-4 ml-auto text-right md:gap-16">
-          <button onClick={hamburgerClick} className="relative z-30">
+          <button
+            onClick={hamburgerClick}
+            className="relative z-30 mix-blend-difference"
+          >
             <div className="w-4 h-4 flex flex-col justify-center items-center">
               <span
                 className={`block w-4 h-0.5 bg-white transition-all duration-300 ${
@@ -55,7 +58,7 @@ export default function NavBar() {
                 }`}
               ></span>
               <span
-                className={`block w-4 h-0.5 bg-white transition-all duration-300 ${
+                className={`block w-4 h-0.5 bg-white transition-all duration-300 shadow-xs ${
                   hamburger ? "-rotate-45 -translate-y-0.5" : ""
                 }`}
               ></span>

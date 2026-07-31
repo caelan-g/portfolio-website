@@ -15,6 +15,7 @@ import WIP from "@/components/ui/wip";
 import Image from "next/image";
 import { BentoPortfolio } from "@/components/ui/bento";
 import { StepBlock } from "@/components/ui/step-block";
+import BCI from "@/components/bci";
 
 export default function Home() {
   const words = ["Hey,", "Salut,", "Nǐ hǎo,", "G'day,", "Hola,", "Privet,"];
@@ -62,6 +63,7 @@ export default function Home() {
       </section>
 
       <section id="projects" className="w-screen">
+        <BCI />
         <Islands />
         <Edura />
         <FurGuard />
